@@ -1,0 +1,59 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Counselling Chatbot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Landing Page -->
+    <section id="page-landing" class="active">
+      <h1>🎓 Career Counselling Chatbot</h1>
+      <p>Discover your ideal stream and career based on your interests!</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Career Icon" class="icon">
+      <button onclick="goToPage('page-hobby')">Get Started</button>
+    </section>
+
+    <!-- Hobby Input -->
+    <section id="page-hobby">
+      <h2>Step 1: What's your favorite hobby?</h2>
+      <input type="text" id="hobbyInput" placeholder="e.g., Drawing, Coding, Helping people" />
+      <button onclick="goToPage('page-subject')">Next</button>
+    </section>
+
+    <!-- Subject Input -->
+    <section id="page-subject">
+      <h2>Step 2: What's your favorite subject?</h2>
+      <input type="text" id="subjectInput" placeholder="e.g., Math, Biology, History" />
+      <button onclick="showStream()">Next</button>
+    </section>
+
+    <!-- Stream Suggestion -->
+    <section id="page-stream">
+      <h2>📘 Recommended Stream</h2>
+      <div id="streamOutput"></div>
+      <img id="streamImage" class="icon" />
+      <button onclick="goToPage('page-careers')">Next</button>
+    </section>
+
+    <!-- Career Suggestions -->
+    <section id="page-careers">
+      <h2>💼 Suggested Careers</h2>
+      <ul id="careerList"></ul>
+      <button onclick="goToPage('page-roadmap')">See Roadmap</button>
+    </section>
+
+    <!-- Roadmap Page -->
+    <section id="page-roadmap">
+      <h2>📍 Career Roadmap</h2>
+      <div id="roadmap" class="flowchart"></div>
+      <button onclick="goToPage('page-landing')">Start Over</button>
+    </section>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
